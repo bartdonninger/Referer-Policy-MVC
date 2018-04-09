@@ -19,6 +19,8 @@ namespace Referer_Policy_MVC.Controllers
         {
             ViewData["Message"] = "Your application description page.";
 
+            Response.Headers["Referrer-Policy"] = "same-origin";
+
             return View();
         }
 
